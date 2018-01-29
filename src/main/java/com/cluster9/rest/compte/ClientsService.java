@@ -54,7 +54,7 @@ public class ClientsService {
 	@Path("/accounts/create/{code}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public ClientAccount save(@PathParam(value="code") int code, ClientAccount ca){
-		comptes.put(code, ca);
+		comptes.put(code, ca);  // pour être correct: ajouter le code dans le json directement
 		return ca;
 	}
 
